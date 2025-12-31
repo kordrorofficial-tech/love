@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<title>รักเค้ามั้ย 💖</title>
+
+<style>
+body{
+  margin:0;
+  height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background:linear-gradient(135deg,#ff9a9e,#fad0c4);
+  font-family:'Segoe UI',sans-serif;
+}
+
+.box{
+  background:white;
+  padding:40px;
+  border-radius:20px;
+  text-align:center;
+  box-shadow:0 10px 30px rgba(0,0,0,.2);
+}
+
+h1{color:#ff4d6d;}
+
+button{
+  font-size:18px;
+  padding:12px 30px;
+  margin:10px;
+  border:none;
+  border-radius:30px;
+  cursor:pointer;
+  transition:.2s;
+}
+
+.love{background:#ff4d6d;color:white;}
+.no{background:#ccc;}
+
+button:hover{transform:scale(1.1);}
+
+audio{display:none;}
+</style>
+</head>
+
+<body>
+
+<div class="box">
+  <h1 id="text">แฟนรักเค้ามั้ย 💕</h1>
+  <button class="love" onclick="love()">รัก</button>
+  <button class="no" onclick="nolove()">ไม่รัก</button>
+</div>
+
+<audio id="click" src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_6e4a2f4f3f.mp3"></audio>
+<audio id="bgm" src="https://cdn.pixabay.com/download/audio/2023/12/04/audio_1bbd2c9cb2.mp3" autoplay loop></audio>
+
+<script>
+const click=document.getElementById("click");
+const text=document.getElementById("text");
+
+function love(){
+  click.play();
+  text.innerHTML="เค้าก็รักแฟนมาก 💖<br>HAPPY NEW YEAR 🎉<br>อยู่กับเค้าไปอีกหลายๆปีเลยนะ 😘🫶🏻❤️";
+}
+
+function nolove(){
+  click.play();
+  text.innerHTML="ไม่รักจริงอ่อ 😿";
+  setTimeout(()=>location.reload(),1500);
+}
+</script>
+
+</body>
+</html>
